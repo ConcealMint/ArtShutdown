@@ -12,6 +12,7 @@ const logo4 = document.querySelector('img[data-number="4"]');
 // logo3.style.border = "2px solid blue";
 // logo4.style.border = "2px solid yellow";
 /*Delete the Borders above later.*/
+/*Delete the Borders above later.*/
 
 
 /* Attributes given to the BIG Game Logo that says "Art Shutdown". */
