@@ -1,0 +1,193 @@
+@font-face {
+    font-family: 'Bang';
+    src: url("../fonts/Retroking.ttf") format('truetype');
+}
+
+@keyframes glow {
+    0%, 100% {
+        transition: 1s linear;
+        filter: drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.319));
+    }
+
+    66% {
+        transition: 1s linear;
+        filter: drop-shadow(0px 0px 20px #ffffff82);
+    }
+
+}
+
+@keyframes slideToRight {
+    0% {
+        transform: rotate(-90deg);
+    }
+
+    100% {
+        transform: translateX(700%);
+    }
+}
+
+@keyframes slideToBottom {
+    0% {
+        transform: rotate(-90deg);
+    }
+
+    100% {
+        transform: translateY(400%);
+    }
+}
+
+@keyframes slideToLeft {
+    0% {
+        transform: rotate(-90deg);
+    }
+
+    100% {
+        transform: translateX(-700%);
+    }
+}
+
+@keyframes slideToTop {
+    0% {
+        transform: rotate(-90deg);
+    }
+
+    100% {
+        transform: translateY(-400%);
+    }
+}
+
+@keyframes rotateTranslucentSun {
+    0%, 100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+        opacity: 0.45;
+    }
+
+    20% {
+        transform: translate(-50%, -50%) rotate(72deg);
+        opacity: 0.5;
+    }
+
+    40% {
+        transform: translate(-50%, -50%) rotate(144deg);
+        opacity: 0.75;
+    }
+
+    60% {
+        transform: translate(-50%, -50%) rotate(216deg);
+        opacity: 0.75;
+    }
+
+    80% {
+        transform: translate(-50%, -50%) rotate(288deg);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+        opacity: 0.45;
+    }
+}
+
+
+
+.rotateTranslucentSun {
+    animation: rotateTranslucentSun 3.5s linear infinite, glow 1s linear infinite reverse;
+}
+
+.slideAnimationToRight {
+    animation: slideToRight 750ms ease-in-out infinite, glow 1s linear infinite reverse;
+}
+
+.slideAnimationToBottom {
+    animation: slideToBottom 750ms ease-in-out infinite, glow 1s linear infinite reverse;
+}
+
+.slideAnimationToLeft {
+    animation: slideToLeft 750ms ease-in-out infinite, glow 1s linear infinite reverse;
+}
+
+.slideAnimationToTop {
+    animation: slideToTop 750ms ease-in-out infinite, glow 1s linear infinite reverse;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+#mainScreen {
+    height: 100vh;
+    width: 100vw;
+    background-color: #001B79;
+}
+
+#contents {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 9px solid rgba(0, 0, 0, 0.245);
+    height: 90%;
+    width: 71.4%;
+    box-shadow: 20px 20px 60px #0a1a54, inset -10px -10px 30px #0f38ca;
+}
+
+#menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid greenyellow;
+    height: 90%;
+    width: 91.4%;
+    overflow: hidden;
+    display: flex;
+}
+
+#menu #logosOfGame {
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%, -50%);
+    height: 30%;
+    width: 30%;
+    border: 2px solid brown;
+    /* overflow: hidden; */
+    display: flex;
+}
+
+#menu #logosOfGame .logo {
+    height: 20%;
+}
+
+#menu #logosOfGame #gameLogo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50%;
+    transform: translate(-50%, -50%);
+    animation: glow 5s linear infinite;
+}
+
+#menu #logosOfGame .translucentSun {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    height:100%;
+    z-index: -1;
+}
+
+#containerForNameAndButtonAndPFP {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 53%;
+    width: 65%;
+    border: red 2px solid;
+}

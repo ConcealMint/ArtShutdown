@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'BARB';
+    src: url("./fonts/Retroking.ttf") format('truetype');
+}
+
+body {
+    font-family: 'BARB';
+    margin: 0;
+    padding: 0;
+}
+
+#body {
+    background-color: #0802A3;
+    height: 97.6vh;
+    overflow: hidden;
+    width: 97.6vw;
+    border-left: 1.2vw solid black;
+    border-right: 1.2vw solid black;
+    border-top: 1.2vh solid black;
+    border-bottom: 1.2vh solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#mainMenuContainer {
+    border: 1vh solid rgb(46, 40, 40);
+    height: 50vh;
+    width: 65vw;
+    display: flex;
+    overflow: hidden;
+    justify-content: flex-start;
+    background-color: #04007f;
+}
+
+#mainMenuContainer #playerIcon {
+    height: 21vh;
+    border-radius: 50%;
+    border: #FF4B91 solid 1vh;
+}
+
+#selectName {
+    position: absolute;
+    left: 45%;
+    top: 30%;
+    font-size: 4vh;
+}
+
+#finalName {
+    background-color: #ff639f;
+    border-color: #ff639f;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    height: 7vh;
+    width: 20vw;
+}
+
+#textBoxProceedContainer img {
+    border-radius: 50%;
+    border: 2px solid black;
+    height: 33.8%;
+}
+
+
+#gameLogo {
+    position: absolute;
+    height: 30vh;
+    top: 14.3%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 23;
+}
+
+#logo01 {
+    position: absolute;
+    top: 9%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+    height: 13%;
+}
+
+#logo02 {
+    position: absolute;
+    top: 9%;
+    left: 62%;
+    transform: translate(-50%, -50%);
+    height: 12%;
+}
+@media screen and (max-width: 768px) {
+    #mainMenuContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #selectName {
+        margin-bottom: 10px;
+        position: static;
+        width: 80%; /* Set a maximum width */
+        max-width: 250px; /* Adjust maximum width as needed */
+        text-align: center;
+        word-wrap: break-word; /* Ensure label wraps onto multiple lines if needed */
+    }
+
+    #finalName {
+        width: 80%; /* Set a maximum width for the input field */
+        max-width: 250px; /* Adjust maximum width as needed */
+        box-sizing: border-box; /* Include padding and border in the width */
+    }
+}

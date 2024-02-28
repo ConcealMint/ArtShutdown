@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <form id="joinForm">
+        <input type="text" id="lobbyNameInput" placeholder="Enter lobby name">
+        <button type="submit">Join Lobby</button>
+    </form>
+    <div id="lobbyInfo"></div>
+
+    <script>
+        // Function to join a lobby
+        function joinLobby(lobbyName) {
+            // Assuming lobbyName is the name of the lobby the player wants to join
+            // You would implement logic here to actually join the lobby
+            console.log(`Joining lobby: ${lobbyName}`);
+        }
+
+        // Event listener for the lobby join form submission
+        const joinForm = document.getElementById("joinForm");
+        joinForm.addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+            const lobbyName = document.getElementById("lobbyNameInput").value;
+            joinLobby(lobbyName);
+        });
+
+        // Example usage:
+        // joinLobby("Public Lobby 1"); // This line can be used to simulate joining a lobby programmatically
+
+        // Function to join a lobby (simulated)
+        function joinLobby(lobbyName) {
+            // Simulate joining the lobby by updating the UI with lobby details
+            const lobbyDetails = {
+                name: lobbyName,
+                players: Math.floor(Math.random() * 4) + 1, // Simulate random number of players (1 to 4)
+                maxPlayers: 4 // Simulate maximum number of players
+            };
+
+            // Update the UI with lobby details
+            updateLobbyUI(lobbyDetails);
+        }
+
+        // Function to update the UI with lobby details
+        function updateLobbyUI(lobbyDetails) {
+            const lobbyInfoContainer = document.getElementById("lobbyInfo");
+            lobbyInfoContainer.innerHTML = `
+        <h2>Lobby Details</h2>
+        <p>Lobby Name: ${lobbyDetails.name}</p>
+        <p>Players: ${lobbyDetails.players}/${lobbyDetails.maxPlayers}</p>
+    `;
+        }
+
+    </script>
+</body>
+
+</html>
