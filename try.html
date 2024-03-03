@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SPA Example</title>
+<style>
+  .hidden {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<!-- Navigation Links -->
+<nav>
+  <ul>
+    <li><a href="#" onclick="showPage('signin')">Sign In</a></li>
+    <li><a href="#" onclick="showPage('profile')">Profile Setup</a></li>
+    <li><a href="#" onclick="showPage('lobby')">Game Lobby</a></li>
+  </ul>
+</nav>
+
+<!-- Page Content -->
+<div id="signin" class="hidden">
+  <h1>Sign In Page</h1>
+  <!-- Add Sign In Form or Content -->
+</div>
+
+<div id="profile" class="hidden">
+  <h1>Profile Setup Page</h1>
+  <!-- Add Profile Setup Form or Content -->
+</div>
+
+<div id="lobby" class="hidden">
+  <h1>Game Lobby Page</h1>
+  <!-- Add Game Lobby Content -->
+</div>
+
+<script>
+  function showPage(pageId) {
+    // Hide all pages
+    var pages = document.querySelectorAll('.hidden');
+    pages.forEach(function(page) {
+      page.style.display = 'none';
+    });
+
+    // Show the selected page
+    var pageToShow = document.getElementById(pageId);
+    if (pageToShow) {
+      pageToShow.style.display = 'block';
+    }
+  }
+</script>
+
+</body>
+</html>
